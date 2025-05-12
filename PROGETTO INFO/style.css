@@ -4,7 +4,7 @@ body{
 
 #principalHeader{
     text-align: center;
-    background: linear-gradient(aqua, rgb(0, 186, 255), rgb(30, 88, 217));
+    background-color: rgb(238,238,238);
     border: 2px solid black;
     width: 100%;
     display: flex;
@@ -34,4 +34,8 @@ body{
 
 main {
     margin-left: 5px;
+}
+
+#imginiziale{
+
 }
