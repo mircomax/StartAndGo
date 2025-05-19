@@ -12,7 +12,7 @@ body {
     align-items: center;
     background-color: #1a73e8;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -158,10 +158,10 @@ nav {
 }
 
 .nav-links a#Registrati {
-    background-color: #ffffff;
+    background-color: white;
     color: #1a73e8;
     font-weight: bold;
-    border: 2px solid #ffffff;
+    border: 2px solid white;
     transition: all 0.3s ease;
 }
 
@@ -221,24 +221,35 @@ width: 100%;
     font-size: bold;
 }
 
+#PrincipalSlogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    position: relative;
+}
+
+.video-container {
+    width: 100%;
+    position: relative;
+    margin-top: 5px;
+
+}
+
 /* Video background */
 #bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100vw;
-    min-height: 100vh;
-    width: auto;
-    height: auto;
-    z-index: -1;
+    position: relative;
+    width: 100%;
+    height: 400px;
     object-fit: cover;
-     /* Puoi regolare la trasparenza */
-    pointer-events: none;
+    z-index: 1;
+    border-radius: 0 0 20px 20px;
+    pointer-events: none; /* Per non interferire con i clic */
+    display: block;
 }
 
 #titolovideo {
-    position:absolute;
-    font-size: larger;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -251,10 +262,11 @@ width: 100%;
     padding: 30px 10px;
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    pointer-events: none;
 }
 
 #titolovideo h1 {
-    font-size: 3.2rem;
+    font-size: 51.2px; 
     font-weight: bold;
     margin-bottom: 16px;
     letter-spacing: 2px;
@@ -262,10 +274,28 @@ width: 100%;
 }
 
 #titolovideo h4 {
-    font-size: 1.5rem;
+    font-size: 24px; 
     font-weight: 400;
     margin-top: 0;
     letter-spacing: 1px;
+}
+
+.TestoSegnali {
+    color: #1a73e8;
+    padding: 5px;
+    width: 40%;
+}
+
+.TestoSegnali h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.TestoSegnali h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 footer {
