@@ -5,7 +5,7 @@ body {
     color: #2c3e50;
 }
 
-#principalHeader {
+.principalHeader {
     text-align: center;
     width: 100%;
     display: flex;
@@ -16,7 +16,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#primo {
+.primo {
     width: 100%;
     height: auto;
     display: flex;
@@ -31,23 +31,45 @@ body {
 
 #immagine img {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#telefono {
-    
+#telefono img {
+    width: 100%;
+    max-width: 500px;;
+    border-radius: 10px;
+    height: auto;
+   
 }
 
-#titolo {
+
+.start-button {
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    width:180px;
+ font-weight: bold;
+ margin-left: 80px;
+ transition: all 0.3s ease;
+
+}
+.start-button:hover{
+    background-color: #1669c1;
+    color:white;
+}
+.titolo {
     margin-left: 30px;
     margin-right: 10%;
     padding: 10px;
     font-family: 'Merriweather', serif;
 }
 
-#titolo img {
+.titolo img {
     height: 80px;
 }
 
@@ -75,7 +97,7 @@ body {
     line-height: 1.6;
 }
 
-#separazione {
+.separazione {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,18 +105,18 @@ body {
     padding: 0 20px;
 }
 
-#separazione div {
+.separazione div {
     margin-right: 50px;
     margin-left: 50px;
 }
 
-#Crediti {
+.Crediti {
     margin-top: 30px;
     margin-bottom: 30px;
     color: white;
 }
 
-#principalHeader button {
+.principalHeader button {
     padding: 5px;
     font-size: 20px;
 }
@@ -149,9 +171,110 @@ nav {
     border-color: #1669c1;
 }
 
-footer {
-    text-align: center;
+.container-registrazione{
+    background-color: #ffffff;
+    border-radius: 10px;
+ font-family: 'Lora', serif;
+padding: 50px 100px 50px 50px;
+margin-top: 150px;
+margin-bottom: 100px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+text-align: center;
+
+}
+
+.container-registrazione h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+.container-registrazione label{
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a73e8;
+}
+.container-registrazione input[type="submit"] {
+    color:white;
+    background-color: #1a73e8;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor:pointer;
+width: 100%;
+    font-family: 'Lora', serif;
+}
+
+.container-registrazione input[type="email"],
+.container-registrazione input[type="text"],
+.container-registrazione input[type="password"] {
+    width: 100%;
     padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: 'Lora', serif;
+    color:#1669c1;
+    font-size: bold;
+}
+
+/* Video background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+     /* Puoi regolare la trasparenza */
+    pointer-events: none;
+}
+
+#titolovideo {
+    position:absolute;
+    font-size: larger;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90vw;
+    color: #fff;
+    text-shadow: 0 4px 24px #1a73e8, 0 2px 8px #000;
+    z-index: 2;
+    font-family: 'Merriweather', serif;
+    padding: 30px 10px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+#titolovideo h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#titolovideo h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+footer {
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    text-align: center;
+    padding: 30px;
     background-color: #1a73e8;
     color: white;
     font-size: 14px;
