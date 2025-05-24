@@ -309,7 +309,7 @@ width: 100%;
   text-decoration: none;
   flex: 1 1 calc(33.333% - 18px); /* 3 per riga, con gap */
   display: flex;
-  align-items: stretch; /* Allinea i figli all'altezza massima */
+  align-items: center; /* Allinea i figli all'altezza massima */
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -351,6 +351,7 @@ width: 100%;
   width: auto;
   padding: 0;
   color: #1a73e8;
+
 }
 
 .TestoSegnali h2 {
@@ -366,23 +367,6 @@ width: 100%;
   color: #444;
 }
 
-.TestoSegnali {
-    color: #1a73e8;
-    padding: 5px;
-    width: 60%;
-}
-
-.TestoSegnali h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.TestoSegnali h3 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #333;
-}
 
 .immagine2{
     width: 200px;
@@ -469,18 +453,98 @@ padding: 10px 25px;
     color: #7e00bd;
 }
 
-
-
-
-
-
-
-
-
-
+/* --- Sezioni Chi Siamo e Contatti --- */
+#chisiamo, #contatti {
+  margin: 60px auto 0 auto;
+  width: 90%;
+}
+#contatti {
+  margin: 50px auto 80px auto;
+}
+.chisiamo-container, .contatti-container {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(26,115,232,0.08);
+  padding: 40px 32px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.chisiamo-text h2,
+.contatti-title {
+  color: #1a73e8;
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-family: 'Merriweather', serif;
+}
+.chisiamo-text p {
+  color: #444;
+  font-size: 1.15em;
+  line-height: 1.7;
+  margin-bottom: 0px;
+}
+.contatti-container {
+  flex-direction: column;
+  gap: 0;
+}
+.contatti-title {
+  margin-bottom: 18px;
+}
+.contatti-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.contatti-info {
+  flex: 1 1 250px;
+}
+.contatti-info p {
+  color: #444;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+.contatti-info ul {
+  list-style: none;
+  padding: 0;
+  color: #1a73e8;
+  font-size: 1.08em;
+}
+.contatti-info a {
+  color: #1669c1;
+  text-decoration: underline;
+}
+.contatti-form {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.contatti-form input,
+.contatti-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cce0fc;
+  font-size: 1em;
+}
+.contatti-form textarea {
+  resize: vertical;
+}
+.contatti-form button {
+  background: #1a73e8;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contatti-form button:hover {
+  background: #1669c1;
+}
 
 footer {
-    position:fixed;
+    position:relative;
     left:0;
     bottom:0;
     width:100%;
