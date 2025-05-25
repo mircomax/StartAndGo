@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Start&Go</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Merriweather&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="principalHeader">
+        <div class="titolo">
+            <img src="logo2.png" style="height: 80px">
+        </div>
+        <div class="separazione">
+            <div class="Crediti"></div>
+            <nav>
+                <div class="nav-links">
+                    <a href="INDEX.html" id="Home">Home</a>
+                    <a href="#chisiamo" id="ChiSiamo">Chi Siamo</a>
+                    <a href="#contatti" id="Contatti">Contattaci</a>
+                    <a href="registrazione.html" id="Registrati">Registrati</a>
+                </div>
+            </nav>
+        </div>
+    </header> 
+
+  <main class="quiz-container">
+    <h1>Quiz: Riconosci i segnali!</h1>
+
+    <form id="quizForm">
+      <!-- 1-2: Segnali di Obbligo -->
+      <div class="question">
+        <img src="SegnaliObbligo/diritto.png" alt="Segnale di obbligo: diritto">
+        <p>Questo segnale indica che è obbligatorio proseguire diritto.</p>
+        <button type="button" onclick="checkAnswer(this, 0, true)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 0, false)">Falso</button>
+      </div>
+      <div class="question">
+        <img src="SegnaliObbligo/catene.png" alt="Segnale di obbligo: catene">
+        <p>Questo segnale indica che è obbligatorio montare le catene da neve o avere pneumatici invernali.</p>
+        <button type="button" onclick="checkAnswer(this, 1, true)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 1, false)">Falso</button>
+      </div>
+      <!-- 3-4: Segnali di Pericolo -->
+      <div class="question">
+        <img src="segnalipericolo/curvadestra.png" alt="Segnale di pericolo: curva">
+        <p>Questo segnale indica la presenza di una curva pericolosa a destra.</p>
+        <button type="button" onclick="checkAnswer(this, 2, true)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 2, false)">Falso</button>
+      </div>
+      <div class="question">
+        <img src="segnalipericolo/dosso.png" alt="Segnale di pericolo: dosso">
+        <p>Questo segnale avvisa della presenza di una cunetta</p>
+        <button type="button" onclick="checkAnswer(this, 3, false)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 3, true)">Falso</button>
+      </div>
+      <!-- 5-6: Segnalazioni Semaforiche -->
+      <div class="question">
+        <img src="segnalazionisemaforiche/semaforopedonale.png" alt="Semaforo rosso">
+        <p>Le macchine possono transitare alla presenza di questo semaforo rosso</p>
+        <button type="button" onclick="checkAnswer(this, 4, false)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 4, true)">Falso</button>
+      </div>
+      <div class="question">
+        <img src="segnalazionisemaforiche/vigilealt.png" alt="Semaforo giallo">
+        <p>Il vigile in questa posizione equivale al semaforo rosso.</p>
+        <button type="button" onclick="checkAnswer(this, 5, true)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 5, false)">Falso</button>
+      </div>
+      <!-- 7-8: Segnali di Divieto -->
+      <div class="question">
+        <img src="imgdivieti/divietososta.png" alt="Divieto di sosta">
+        <p>Questo segnale indica che è vietato sostare ma è consentito fermarsi brevemente.</p>
+        <button type="button" onclick="checkAnswer(this, 6, true)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 6, false)">Falso</button>
+      </div>
+      <div class="question">
+        <img src="imgdivieti/transito.png" alt="Divieto di accesso">
+        <p>Questo segnale indica che è consentito l’accesso ai ciclomotori.</p>
+        <button type="button" onclick="checkAnswer(this, 7, false)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 7, true)">Falso</button>
+      </div>
+      <!-- 9-10: Segnali di Precedenza -->
+      <div class="question">
+        <img src="imgsegnalip/dareprecedenza.png" alt="Dare precedenza">
+        <p>Questo segnale indica che bisogna dare la precedenza ai veicoli provenienti da destra e sinistra.</p>
+        <button type="button" onclick="checkAnswer(this, 8, true)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 8, false)">Falso</button>
+      </div>
+      <div class="question">
+        <img src="imgsegnalip/stop.png" alt="Stop">
+        <p>Il segnale di STOP obbliga a fermarsi e dare precedenza, anche se la strada sembra libera.</p>
+        <button type="button" onclick="checkAnswer(this, 9, true)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 9, false)">Falso</button>
+      </div>
+      <!-- 11-12: Esempi di Precedenza -->
+      <div class="question">
+        <img src="imgincroci/precedenza-t-o-a-.png" alt="INCROCIO T-O-A">
+        <p>In questo incrocio il veicolo A passa insieme al veicolo T.</p>
+        <button type="button" onclick="checkAnswer(this, 10, false)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 10, true)">Falso</button>
+      </div>
+      <div class="question">
+        <img src="imgincroci/precedenza-h-d-b-l.png" alt="INCROCIO H-D-B-L">
+        <p>In questo incrocio il veicolo B passa per ultimo</p>
+        <button type="button" onclick="checkAnswer(this, 11, false)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 11, true)">Falso</button>
+      </div>
+      <div class="submit-section">
+        <button type="button" onclick="showScore()">Mostra Punteggio</button>
+        <p id="result"></p>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

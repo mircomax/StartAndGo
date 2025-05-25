@@ -117,6 +117,22 @@
     </div>    
 </section>
 
+<!-- Sezione Quiz Intro -->
+<section id="quiz-intro">
+  <div class="quiz-row">
+    <div class="quiz-text">
+      <h2>Metti alla prova la tua conoscenza!</h2>
+      <p>
+        Sei pronto a sfidare te stesso sul Codice della Strada?<br>
+        Clicca e scopri quanto sei preparato!
+      </p>
+    </div>
+    <div class="quiz-btn-box">
+      <a href="quiz.html" class="quiz-btn">VAI AL QUIZ</a>
+    </div>
+  </div>
+</section>
+
 <!-- Sezione Chi Siamo -->
 <section id="chisiamo">
   <div class="chisiamo-container">
@@ -134,30 +150,34 @@
 <!-- Sezione Contatti -->
 <section id="contatti">
   <div class="contatti-container">
-    <h2 class="contatti-title">Contattaci</h2>
     <div class="contatti-flex">
       <div class="contatti-info">
+        <h1> VUOI MAGGIORI <span style="color:black">INFO?</span></h1>
         <p>
           Hai domande, suggerimenti o vuoi collaborare con noi?<br>
           Scrivici, ti risponderemo il prima possibile!
         </p>
-        <ul>
-          <li><strong>Email:</strong> <a href="mailto:info@startandgo.it">info@startandgo.it</a></li>
-          <li><strong>Telefono:</strong> <a href="tel:+390123456789">0123 456789</a></li>
-          <li><strong>Instagram:</strong> <a href="https://instagram.com/startandgo" target="_blank">@startandgo</a></li>
-        </ul>
       </div>
-      <form class="contatti-form">
-        <input type="text" placeholder="Il tuo nome" required>
-        <input type="email" placeholder="La tua email" required>
-        <textarea placeholder="Il tuo messaggio" rows="4" required></textarea>
-        <button type="submit">Invia messaggio</button>
+        <form class="contatti-form">
+          <div style="display: flex; gap: 10px;">
+            <input type="text" placeholder="Nome" required style="flex:1;">
+            <input type="text" placeholder="Cognome" required style="flex:1;">
+          </div>
+          <input type="text" placeholder="Cellulare" required>
+          <input type="email" placeholder="Email" required>
+
+          <label class="privacy-check">
+            <input type="checkbox" required>
+            Letta l'<a href="#">informativa privacy</a> presto il consenso al trattamento dei miei dati personali per finalità commerciali e informative.
+          </label>
+
+          <button type="submit">INVIA</button>
       </form>
     </div>
   </div>
 </section>
 
-<br>
+
     <footer> <!-- footer veloce -->
         <p>&copy; 2025 "START & GO" - Tutti i diritti riservati</p>
     </footer>
