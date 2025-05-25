@@ -103,14 +103,16 @@ body {
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(26,115,232,0.08);
-    padding: 24px 32px;
+    padding: 28px 40px;
     transition: box-shadow 0.2s, transform 0.2s;
     min-height: 140px;
+    border-left: 6px solid #1a73e8;
 }
 
 .obbligo-row:hover {
     box-shadow: 0 8px 24px rgba(26,115,232,0.18);
     transform: scale(1.025);
+    background: linear-gradient(90deg, #d2e6fa, #f5faff );
 }
 
 .obbligo-text {
@@ -120,9 +122,9 @@ body {
 
 .obbligo-text h2 {
     margin: 0 0 10px 0;
-    font-size: 1.25em;
+    font-size: 1.35em;
     color: #1a73e8;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .obbligo-text p {
@@ -132,25 +134,94 @@ body {
 }
 
 .obbligo-img {
-    width: 120px;
+    width: 150px;
     min-width: 100px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-left: 28px;
+    margin-top: 10px;
 }
 
 .obbligo-img img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 1px 8px rgba(0,0,0,0.10);
-    background: #f3f6fa;
+    background: #f0f0f0;
+    transition: transform 0.2s;
 }
 
+
+
+.incrocio {
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(26,115,232,0.08);
+    padding: 28px 40px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    min-height: 140px;
+    border-left: 6px solid #1a73e8;
+}
+
+.incrocio:hover {
+     box-shadow: 0 8px 24px rgba(26,115,232,0.18);
+    transform: scale(1.025);
+    background: linear-gradient(90deg, #d2e6fa, #f5faff );
+}
+
+.incrocio-img {
+    width: 320px;
+    height: 220px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.incrocio-img img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 16px;
+    box-shadow: 0 1px 8px rgba(26,115,232,0.13);
+    border: 2px solid #e3f0ff;
+    object-fit: contain;
+    transition: transform 0.2s;
+    justify-content: center;
+    margin-left: 390px;
+    margin-top: 30px;
+    background: #f0f0f0;
+
+}
+
+.incrocio-desc h2 {
+    color: #1a73e8;
+    font-size: 1.35em;
+    margin-bottom: 12px;
+    margin-top: 0;
+    text-align: left;
+    font-weight: 900;
+}
+
+.incrocio-desc p {
+    font-size: 1.05em;
+    text-align: left;
+    margin: 0;
+    color: #444;
+    font-size: 1.05em
+}
+
+
+
+
 /* Footer */
+
 footer {
-    width: 100%;
+    position:relative;
+    left:0;
+    bottom:0;
+    width:100%;
     text-align: center;
     padding: 30px;
     background-color: #1a73e8;
@@ -158,12 +229,13 @@ footer {
     font-size: 14px;
     margin-top: 30px;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    position: static;
 }
 
 footer p {
     margin: 0;
 }
+
+
 
 /* Responsive */
 @media (max-width: 700px) {
