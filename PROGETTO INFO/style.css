@@ -46,18 +46,22 @@ body {
 }
 
 
+
 #immagine img {
-    width: 100%;
-    max-width: 600px;
+    width: 420px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+    margin-left: 100px;
 }
 
 #telefono img {
-    width: 100%;
-    max-width: 500px;;
+    width: 200px;
     border-radius: 10px;
     height: auto;
+    margin-left: 90px;
+    margin-right: 70px ;
+ 
    
 }
 
@@ -521,6 +525,15 @@ padding: 10px 25px;
   transform: scale(1.05);
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
 
 
 /* --- Sezioni Chi Siamo e Contatti --- */
