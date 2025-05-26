@@ -8,8 +8,8 @@ body {
 .principalHeader {
     text-align: center;
     width: 100%;
-    display: flex;
-    align-items: center;
+    display: flex; /* usa flexbox per disporre gli elementi figli in una riga */
+    align-items: center; /* centra verticalmente gli elementi figli */
     background-color: #1a73e8;
     color: white;
     padding: 10px 0;
@@ -20,24 +20,24 @@ body {
 }
 
 .principalediv{
-    width: 100%;
+    width: 95%;
     height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* usa flexbox per disporre gli elementi figli */
+    align-items: center; /* centra verticalmente gli elementi figli */
+    justify-content: space-between; /* spazia gli elementi figli alle estremità */
     margin: 30px 15px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 }
+
 .primo {
     width: 100%;
     height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* usa flexbox per disporre gli elementi figli */
+    align-items: center; /* centra verticalmente gli elementi figli */
+    justify-content: space-between; /* spazia gli elementi figli alle estremità */
     margin: 30px 15px;
     padding: 20px;
     background-color: #ffffff;
@@ -48,7 +48,7 @@ body {
 
 
 #immagine img {
-    width: 420px;
+    width: 380px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: auto;
@@ -59,7 +59,7 @@ body {
     width: 200px;
     border-radius: 10px;
     height: auto;
-    margin-left: 90px;
+    margin-left: 50px;
     margin-right: 70px ;
  
    
@@ -148,9 +148,9 @@ main {
 
 nav {
     padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* usa flexbox per disporre gli elementi figli */
+    justify-content: space-between; /* spazia gli elementi figli alle estremità */
+    align-items: center; /* centra verticalmente gli elementi figli */
 }
 
 .logo {
@@ -160,7 +160,7 @@ nav {
 }
 
 .nav-links {
-    display: flex;
+    display: flex; /* usa flexbox per disporre i link in una riga */
     padding: 10px;
 }
 
@@ -170,10 +170,10 @@ nav {
     padding: 10px 20px;
     border-radius: 6px;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* transizione fluida su tutte le proprietà */
 }
 
-.nav-links a:hover {
+.nav-links a:hover { /* selettore hover: stile quando il mouse è sopra */
     background-color: #1669c1;
     color: #e6f0ff;
 }
@@ -183,10 +183,10 @@ nav {
     color: #1a73e8;
     font-weight: bold;
     border: 2px solid white;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* transizione fluida su tutte le proprietà */
 }
 
-.nav-links a#Registrati:hover {
+.nav-links a#Registrati:hover { /* selettore hover: stile quando il mouse è sopra */
     background-color: #e6f0ff;
     color: #1669c1;
     border-color: #1669c1;
@@ -195,13 +195,12 @@ nav {
 .container-registrazione{
     background-color: #ffffff;
     border-radius: 10px;
- font-family: 'Lora', serif;
-padding: 50px 100px 50px 50px;
-margin-top: 150px;
-margin-bottom: 100px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-text-align: center;
-
+    font-family: 'Lora', serif;
+    padding: 50px 100px 50px 50px;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .container-registrazione h1 {
@@ -224,7 +223,7 @@ text-align: center;
     font-weight: bold;
     border: none;
     cursor:pointer;
-width: 100%;
+    width: 100%;
     font-family: 'Lora', serif;
 }
 
@@ -243,9 +242,9 @@ width: 100%;
 }
 
 #PrincipalSlogan {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* usa flexbox per disporre gli elementi figli */
+    flex-direction: column; /* impila i figli verticalmente */
+    align-items: center; /* centra orizzontalmente i figli */
     margin-top: 0;
     position: relative;
 }
@@ -298,47 +297,47 @@ width: 100%;
 }
 
 .segnali-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;              /* meno spazio tra i riquadri */
-  justify-content: center;
-  margin: 40px 0;
-  padding: 20px;
-  width: 100vw;
-  max-width: 100vw;
-  box-sizing: border-box;
+    display: flex; /* usa flexbox per disporre i riquadri */
+    flex-wrap: wrap; /* permette il ritorno a capo dei figli */
+    gap: 18px; /* spazio tra i riquadri */
+    justify-content: center; /* centra i figli orizzontalmente */
+    margin: 40px 0;
+    padding: 20px;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
 }
 
 .primo {
-  text-decoration: none;
-  flex: 1 1 calc(33.333% - 18px); /* 3 per riga, con gap */
-  display: flex;
-  align-items: center; /* Allinea i figli all'altezza massima */
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  padding: 32px 24px;
-  min-width: 0;
-  max-width: none;
-  margin: 0;
-  box-sizing: border-box;
-  height: 180px; /* Altezza fissa per i riquadri */
-  transition: transform 0.22s cubic-bezier(.4,1.4,.6,1), box-shadow 0.22s;
-  cursor: pointer;
+    text-decoration: none;
+    flex: 1 1 calc(33.333% - 18px); /* 3 per riga, con gap */
+    display: flex; /* usa flexbox per disporre i contenuti */
+    align-items: center; /* allinea i figli all'altezza massima */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+    height: 180px; /* altezza fissa per i riquadri */
+    transition: transform 0.22s cubic-bezier(.4,1.4,.6,1), box-shadow 0.22s; /* transizione fluida su trasformazione e ombra */
+    cursor: pointer;
 }
 
-.primo:hover {
-  transform: scale(1.045);
-  box-shadow: 0 8px 24px rgba(26,115,232,0.18);
-  z-index: 2;
+.primo:hover { /* selettore hover: stile quando il mouse è sopra */
+    transform: scale(1.045);
+    box-shadow: 0 8px 24px rgba(26,115,232,0.18);
+    z-index: 2;
 }
 
 .img-col {
-  flex-shrink: 0;
-  margin-right: 8px;
-  height: 100%;
-  display: flex;
-  align-items: center;
+    flex-shrink: 0;
+    margin-right: 8px;
+    height: 100%;
+    display: flex; /* usa flexbox per disporre gli elementi figli */
+    align-items: center; /* centra verticalmente i figli */
 }
 
 .img-col img {
@@ -387,7 +386,7 @@ width: 100%;
 
 
 .codicestradale{
-    display: flex;
+    display: flex; /* usa flexbox per disporre gli elementi figli */
     background: linear-gradient(90deg, #8f5be8 0%, #1a73e8 100%); /* violetto → blu */
     opacity: 0.9;
     color: white;
@@ -433,13 +432,13 @@ width: 100%;
     margin-top: 30px;
     margin-bottom: 20px;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* usa flexbox per disporre gli elementi figli */
+    justify-content: center; /* centra orizzontalmente i figli */
+    align-items: center; /* centra verticalmente i figli */
 }
 
 .startbottone{
-padding: 10px 25px;
+    padding: 10px 25px;
     border-radius: 14px;
     background-color: #e3f0ff;
     color: #9964d9;
@@ -448,11 +447,10 @@ padding: 10px 25px;
     width:180px;
  font-weight: bold;
  margin-left: 80px;
- transition: all 0.3s ease;
-
+ transition: all 0.3s ease; /* transizione fluida su tutte le proprietà */
 }
 
-.startbottone:hover{
+.startbottone:hover{ /* selettore hover: stile quando il mouse è sopra */
     background-color: white;
     color: #7e00bd;
 }
@@ -464,15 +462,15 @@ padding: 10px 25px;
   background: linear-gradient(90deg, #1a73e8 0%, #8f5be8 100%);
   margin: 40px 0 40px 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  display: flex; /* usa flexbox per disporre gli elementi figli */
+  justify-content: center; /* centra i figli orizzontalmente */
 }
 
 .quiz-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; /* usa flexbox per disporre gli elementi figli */
+  flex-direction: row; /* impila i figli orizzontalmente */
+  align-items: center; /* centra verticalmente i figli */
+  justify-content: space-between; /* spazia gli elementi figli alle estremità */
   width: 900px;
   background: #fff;
   border-radius: 14px;
@@ -501,8 +499,8 @@ padding: 10px 25px;
 
 .quiz-btn-box {
   flex: 1;
-  display: flex;
-  justify-content: flex-end;
+  display: flex; /* usa flexbox per disporre gli elementi figli */
+  justify-content: flex-end; /* allinea i figli a destra */
   margin-right: 55px;
 }
 
@@ -516,11 +514,11 @@ padding: 10px 25px;
   font-weight: bold;
   text-decoration: none;
   box-shadow: 0 4px 16px rgba(26,115,232,0.13);
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s; /* transizione fluida su background e trasformazione */
   border: none;
 }
 
-.quiz-btn:hover {
+.quiz-btn:hover { /* selettore hover: stile quando il mouse è sopra */
   background: linear-gradient(90deg, #8f5be8 0%, #1a73e8 100%);
   transform: scale(1.05);
   cursor: pointer;
@@ -529,17 +527,11 @@ padding: 10px 25px;
 
 
 
-
-
-
-
-
-
-
 /* --- Sezioni Chi Siamo e Contatti --- */
 #chisiamo, #contatti {
   margin: 60px auto 0 auto;
   width: 90%;
+  font-family: 'Merriweather', serif;
 }
 #contatti {
   margin: 50px auto 80px auto;
@@ -549,9 +541,9 @@ padding: 10px 25px;
   border-radius: 14px;
   box-shadow: 0 4px 16px rgba(26,115,232,0.08);
   padding: 40px 32px;
-  display: flex;
-  align-items: center;
-  gap: 40px;
+  display: flex; /* usa flexbox per disporre gli elementi figli */
+  align-items: center; /* centra verticalmente i figli */
+  gap: 40px; /* spazio tra i figli */
 }
 .chisiamo-text h2,
 .contatti-title {
@@ -581,19 +573,19 @@ padding: 10px 25px;
 .contatti-container {
   max-width: 1000px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
+  display: flex; /* usa flexbox per disporre gli elementi figli */
+  flex-direction: column; /* impila i figli verticalmente */
+  align-items: flex-start; /* allinea i figli a sinistra */
+  gap: 30px; /* spazio tra i figli */
   background: none;
 }
 
 /* Info + Form layout */
 .contatti-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
+  display: flex; /* usa flexbox per disporre gli elementi figli */
+  flex-wrap: wrap; /* permette il ritorno a capo dei figli */
+  gap: 40px; /* spazio tra i figli */
+  justify-content: space-between; /* spazia i figli alle estremità */
   width: 100%;
 }
 
@@ -624,9 +616,9 @@ padding: 10px 25px;
 /* Form */
 .contatti-form {
   flex: 1 1 480px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  display: flex; /* usa flexbox per disporre gli elementi figli */
+  flex-direction: column; /* impila i figli verticalmente */
+  gap: 18px; /* spazio tra i figli */
 }
 
 .contatti-form input,
@@ -712,25 +704,25 @@ padding: 10px 25px;
   font-weight: bold;
 }
 
-.question button:nth-child(3) {
-  background-color: #28a745;
-  color: white;
+.question button:nth-child(3) { /* seleziona il terzo bottone figlio */
+    background-color: #28a745;
+    color: white;
 }
 
-.question button:nth-child(4) {
-  background-color: #dc3545;
-  color: white;
+.question button:nth-child(4) { /* seleziona il quarto bottone figlio */
+    background-color: #dc3545;
+    color: white;
 }
-.question button:nth-child(3):hover, .question button:nth-child(4):hover{
-  background-color: #ffc107;
-  color: black;
+.question button:nth-child(3):hover, .question button:nth-child(4):hover{ /* stile su hover per i bottoni specifici */
+    background-color: #ffc107;
+    color: black;
 }
 
-.question button:disabled { /*disabilita i bottoni*/
-  opacity: 0.6;
-  cursor: not-allowed;
-  background-color: #ccc ;
-  color: #333;
+.question button:disabled { /* disabilita i bottoni */
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #ccc ;
+    color: #333;
 }
 .submit-section {
   text-align: center;
@@ -752,6 +744,50 @@ padding: 10px 25px;
   font-size: 20px;
   color: #2c3e50;
   margin-top: 15px;
+}
+
+/* Modale (popup) di sfondo oscurato */
+.modal {
+  display: none; /* Il modale è inizialmente nascosto */
+  position: fixed; /* Resta fisso anche quando si scrolla */
+  z-index: 999; /* Garantisce che sia sopra agli altri elementi */
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Sfondo nero trasparente */
+}
+
+/* Contenuto del modale centrato */
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Bottone per chiudere il modale */
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+}
+
+/* Bottone per scaricare il certificato */
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.download-btn:hover {
+  background-color: #218838; /* Cambia colore al passaggio del mouse */
 }
 
 

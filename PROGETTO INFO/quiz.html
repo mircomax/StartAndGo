@@ -17,8 +17,8 @@
             <nav>
                 <div class="nav-links">
                     <a href="INDEX.html" id="Home">Home</a>
-                    <a href="#chisiamo" id="ChiSiamo">Chi Siamo</a>
-                    <a href="#contatti" id="Contatti">Contattaci</a>
+                    <a href="secondpage.html#chisiamo" id="ChiSiamo">Chi Siamo</a>
+                    <a href="secondpage.html#contatti" id="Contatti">Contattaci</a>
                     <a href="registrazione.html" id="Registrati">Registrati</a>
                 </div>
             </nav>
@@ -59,8 +59,8 @@
       <div class="question">
         <img src="segnalazionisemaforiche/semaforopedonale.png" alt="Semaforo rosso">
         <p>Le macchine possono transitare alla presenza di questo semaforo rosso</p>
-        <button type="button" onclick="checkAnswer(this, 4, false)">Vero</button>
-        <button type="button" onclick="checkAnswer(this, 4, true)">Falso</button>
+        <button type="button" onclick="checkAnswer(this, 4, true)">Vero</button>
+        <button type="button" onclick="checkAnswer(this, 4, false)">Falso</button>
       </div>
       <div class="question">
         <img src="segnalazionisemaforiche/vigilealt.png" alt="Semaforo giallo">
@@ -113,6 +113,16 @@
       </div>
     </form>
   </main>
+
+  <!-- Modale per il certificato -->
+<div id="certModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Complimenti!</h2>
+    <p>Hai superato il test! Scarica il tuo certificato.</p>
+    <a href="certificato.pdf" download class="download-btn">Scarica Certificato</a>
+  </div>
+</div>
 
   <script src="script.js"></script>
 </body>

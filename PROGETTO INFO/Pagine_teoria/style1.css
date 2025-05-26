@@ -9,8 +9,8 @@ body {
 .principalHeader {
     text-align: center;
     width: 100%;
-    display: flex;
-    align-items: center;
+    display: flex; /* usa flexbox per disporre gli elementi figli in una riga */
+    align-items: center; /* centra verticalmente gli elementi figli */
     background-color: #1a73e8;
     color: white;
     padding: 10px 0;
@@ -32,15 +32,15 @@ body {
 }
 
 .separazione {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* usa flexbox per disporre gli elementi figli in una riga */
+    align-items: center; /* centra verticalmente gli elementi figli */
+    justify-content: space-between; /* spazia gli elementi figli alle estremità */
     width: 100%;
     padding: 0 20px;
 }
 
 .nav-links {
-    display: flex;
+    display: flex; /* usa flexbox per disporre i link in una riga */
     padding: 10px;
 }
 
@@ -50,10 +50,10 @@ body {
     padding: 10px 20px;
     border-radius: 6px;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* transizione fluida su tutte le proprietà */
 }
 
-.nav-links a:hover {
+.nav-links a:hover { /* selettore hover: stile quando il mouse è sopra */
     background-color: #1669c1;
     color: #e6f0ff;
 }
@@ -63,10 +63,10 @@ body {
     color: #1a73e8;
     font-weight: bold;
     border: 2px solid white;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* transizione fluida su tutte le proprietà */
 }
 
-.nav-links a#Registrati:hover {
+.nav-links a#Registrati:hover { /* selettore hover: stile quando il mouse è sopra */
     background-color: #e6f0ff;
     color: #1669c1;
     border-color: #1669c1;
@@ -90,26 +90,26 @@ body {
 
 /* Lista obblighi */
 .obbligo-list {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
+    display: flex; /* usa flexbox per disporre gli obblighi in colonna */
+    flex-direction: column; /* impila i figli verticalmente */
+    gap: 28px; /* spazio tra i riquadri */
     max-width: 1100px;
     margin: 0 auto 60px auto;
 }
 
 .obbligo-row {
-    display: flex;
-    align-items: center;
+    display: flex; /* usa flexbox per disporre gli elementi figli in una riga */
+    align-items: center; /* centra verticalmente gli elementi figli */
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(26,115,232,0.08);
     padding: 28px 40px;
-    transition: box-shadow 0.2s, transform 0.2s;
+    transition: box-shadow 0.2s, transform 0.2s; /* transizione fluida su ombra e trasformazione */
     min-height: 140px;
     border-left: 6px solid #1a73e8;
 }
 
-.obbligo-row:hover {
+.obbligo-row:hover { /* selettore hover: stile quando il mouse è sopra */
     box-shadow: 0 8px 24px rgba(26,115,232,0.18);
     transform: scale(1.025);
     background: linear-gradient(90deg, #d2e6fa, #f5faff );
@@ -136,9 +136,9 @@ body {
 .obbligo-img {
     width: 150px;
     min-width: 100px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    display: flex; /* usa flexbox per disporre l'immagine */
+    justify-content: flex-end; /* allinea l'immagine a destra */
+    align-items: center; /* centra verticalmente */
     margin-left: 28px;
     margin-top: 10px;
 }
@@ -150,7 +150,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 1px 8px rgba(0,0,0,0.10);
     background: #f0f0f0;
-    transition: transform 0.2s;
+    transition: transform 0.2s; /* transizione fluida sulla trasformazione */
 }
 
 
@@ -161,13 +161,13 @@ body {
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(26,115,232,0.08);
     padding: 28px 40px;
-    transition: box-shadow 0.2s, transform 0.2s;
+    transition: box-shadow 0.2s, transform 0.2s; /* transizione fluida su ombra e trasformazione */
     min-height: 140px;
     border-left: 6px solid #1a73e8;
 }
 
-.incrocio:hover {
-     box-shadow: 0 8px 24px rgba(26,115,232,0.18);
+.incrocio:hover { /* selettore hover: stile quando il mouse è sopra */
+    box-shadow: 0 8px 24px rgba(26,115,232,0.18);
     transform: scale(1.025);
     background: linear-gradient(90deg, #d2e6fa, #f5faff );
 }
@@ -187,7 +187,7 @@ body {
     box-shadow: 0 1px 8px rgba(26,115,232,0.13);
     border: 2px solid #e3f0ff;
     object-fit: contain;
-    transition: transform 0.2s;
+    transition: transform 0.2s; /* transizione fluida sulla trasformazione */
     justify-content: center;
     margin-left: 390px;
     margin-top: 30px;
@@ -209,10 +209,43 @@ body {
     text-align: left;
     margin: 0;
     color: #444;
-    font-size: 1.05em
+    line-height: 1.05em; /* imposta l'altezza della linea per migliorare la leggibilità */
 }
 
 
+
+/* bottoni avanti/indietro per la navigazione tra le pagine di teoria */
+.teoria-nav-buttons {
+    display: flex; /* usa flexbox per disporre i bottoni */
+    justify-content: space-between; /* uno a sinistra e uno a destra */
+    margin: 40px 0 0 0;
+    padding: 0 30px;
+}
+
+.teoria-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #1a73e8;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s; /* transizione fluida sul colore di sfondo */
+}
+
+.teoria-btn:hover { /* stile quando il mouse è sopra */
+    background-color: #1669c1;
+    color: #e6f0ff;
+}
+
+.teoria-btn.left {
+    margin-right: auto;
+}
+
+.teoria-btn.right {
+    margin-left: auto;
+}
 
 
 /* Footer */
@@ -235,25 +268,3 @@ footer p {
     margin: 0;
 }
 
-
-
-/* Responsive */
-@media (max-width: 700px) {
-    .obbligo-row {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 18px 10px;
-    }
-    .obbligo-img {
-        width: 100%;
-        justify-content: flex-start;
-        margin-top: 12px;
-    }
-    .obbligo-img img {
-        width: 80px;
-        height: 80px;
-    }
-    .obbligo-text {
-        padding-right: 0;
-    }
-}
