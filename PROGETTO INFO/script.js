@@ -1,24 +1,8 @@
-// risposte corrette per ogni domanda (true = "vero" è giusto, false = "falso" è giusto)
-const correctAnswers = [
-  true,   // 1 obbligo: diritto
-  true,   // 2 obbligo: catene
-  true,   // 3 pericolo: curva
-  true,  // 4 pericolo: cunetta
-  true,  // 5 semaforo rosso
-  true,   // 6 vigile ALT
-  true,   // 7 divieto di sosta
-  true,  // 8 divieto di transito
-  true,   // 9 dare precedenza
-  true,   // 10 stop
-  true,  // 11 incrocio TOA
-  true   // 12 incrocio HDBL
-];
-
 let score = 0;      // tiene traccia del punteggio dell'utente
 let answered = 0;   // conta quante domande sono già state risposte
 
 // funzione che controlla la risposta dell'utente
-function checkAnswer(button, questionIndex, userAnswer) {
+function checkAnswer(button, userAnswer) {
   // ottiene tutti i bottoni della domanda corrente
   const buttons = button.parentElement.querySelectorAll("button");
 
@@ -29,7 +13,7 @@ function checkAnswer(button, questionIndex, userAnswer) {
   buttons.forEach(btn => btn.disabled = true);
 
   // controlla se la risposta è corretta
-  if (userAnswer === correctAnswers[questionIndex]) {
+  if (userAnswer) {
     score++; // incrementa il punteggio se corretto
     button.style.backgroundColor = "#28a745"; // verde per risposta corretta
   } else {
@@ -41,19 +25,25 @@ function checkAnswer(button, questionIndex, userAnswer) {
 
 // mostra il punteggio finale all'utente
 function showScore() {
-  // controlla che tutte le domande siano state risposte
+  const resultText = `Hai ottenuto ${score} su 12 risposte corrette.`;
+  
   if (answered < 12) {
     alert("Completa tutte le domande prima di vedere il punteggio.");
     return;
   }
-  // messaggio di superamento o meno del quiz
+
+  let passText = ""; // definizione fuori dal blocco
   if (score >= 11) {
-    // Mostra il pop-up del certificato
-    document.getElementById("certModal").style.display = "block";
+    passText = "✅ Hai superato il quiz!";
+    document.getElementById("certModal").style.display = "block"; //visualizza il modal per il certificato
   } else {
-    alert("Test non superato. Puoi riprovare!");
+    passText = "❌ Non hai superato il quiz.";
+    alert(document.getElementById("result").textContent = `${resultText} ${passText}`); // mostra il risultato in un alert
   }
+  // mostra il risultato finale nella pagina sotto al bottone
+  document.getElementById("result").textContent = `${resultText} ${passText}`;
 }
+
 
 function closeModal() {
   document.getElementById("certModal").style.display = "none";
